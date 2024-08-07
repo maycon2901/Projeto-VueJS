@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 function layLoad(view){
-    return import(`./views/${view}.vue`)
+    return import(`./components/${view}.vue`)
 }
 
 const routes = [{
@@ -10,14 +10,14 @@ const routes = [{
     component: layLoad('Home')
 },
 {
-    path: '/sobre',
-    name: 'Sobre',
-    component: layLoad('Sobre')
+    path: '/cadastro',
+    name: 'Cadastro',
+    component: layLoad('FormCad')
 },
 {
-    path:'/fla',
-    name: 'Fla',
-    component: layLoad('Fla')
+    path: '/clientes',
+    name: 'TabClientes',
+    component: layLoad('TabClientes')
 }];
 
 const router = createRouter({history: createWebHistory(), routes});
